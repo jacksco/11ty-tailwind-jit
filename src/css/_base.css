@@ -1,0 +1,41 @@
+
+/* Base */
+
+:root {
+
+	/* Spacing */
+	--gutter: calc(1.5rem + 1.5vw);
+	--gutter-sm: calc((1.5rem + 1.5vw) / 2);
+	--gutter-lg: calc((1.5rem + 1.5vw) * 2);
+
+	/* Typography */
+	--measure: 72ch;
+	--measure-sm: 33ch;
+	--measure-lg: 99ch;
+
+	/* Colour */
+	--color-light: #fff;
+  --color-dark: #000;
+}
+
+@layer base {
+
+	html,
+	body {
+    @apply bg-white text-black;
+		overflow-x: hidden;
+	}
+
+}
+
+.skip-to-content-link {
+  @apply absolute p-4 bg-white;
+  left: 50%;
+  transform: translate(50%,-100%);
+  transition: transform 0.3s;
+  z-index: 100;
+}
+
+.skip-to-content-link:focus {
+  transform: translate(-50%, 0%);
+}

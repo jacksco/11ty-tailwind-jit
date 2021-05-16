@@ -1,0 +1,51 @@
+{% import './_globals.html' as globals %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ seo.title }}</title>
+  <meta name="description" content="{{ seo.description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% set fb = seo.social.facebook -%}
+  <meta property="fb:app_id" content="{{ fb.handle }}">
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ fb.title }}" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:description" content="{{ fb.description }}" />
+  <meta property="og:site_name" content="{{ siteName }}" />
+  <meta property="og:locale" content="{{ locale|replace('-', '_') }}" />
+  <meta name="robots" content="noindex" />
+  {% for locale in locales -%}
+    <meta property="og:locale:alternate" content="{{ locale|replace('-', '_') }}" />
+  {% endfor %}
+
+  {% set tw = seo.social.twitter -%}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="{{ tw.handle }}" />
+  <meta name="twitter:url" content="{{ craft.app.request.absoluteUrl }}" />
+  <meta name="twitter:title" content="{{ tw.title }}" />
+  <meta name="twitter:description" content="{{ tw.description }}" />
+  <meta name="twitter:image" content="" />
+
+  {% if seo.robots -%}
+    <meta name="robots" content="{{ seo.robots }}" />
+  {% endif %}
+  {%- if seo.expiry -%}
+    <meta name="robots" content="unavailable_after: {{ seo.expiry }}" />
+  {% endif %}
+
+  <link rel="home" href="{{ siteUrl }}" />
+  <link rel="canonical" href="{{ seo.canonical }}">
+
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- Adobe Fonts -->
+  <script>(function(d){var tkTimeout=3000;if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0}}
+var config={kitId:'KIT_ID_HERE',scriptTimeout:tkTimeout},h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=!1,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=!0;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=!0;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)})(document);</script>
+</head>
+<body class="font-body">
+  <a href="#main-content" class="skip-to-content-link">Skip to content</a>
+  <noscript><link rel="stylesheet" href="https://use.typekit.net/KIT_ID_HERE.css"></noscript>

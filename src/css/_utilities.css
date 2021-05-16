@@ -1,0 +1,18 @@
+
+
+@layer utilities {
+  
+  @responsive {
+    .measure {
+      max-width: var(--measure);
+    }
+  
+    .measure-sm {
+      max-width: var(--measure-sm);
+    }
+  
+    .measure-lg {
+      max-width: var(--measure-lg);
+    }
+  }
+}

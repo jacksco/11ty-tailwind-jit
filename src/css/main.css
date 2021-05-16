@@ -1,0 +1,18 @@
+/* Import Preflight */
+@import "tailwindcss/base";
+
+
+@import "_base.css";
+
+
+/*	Import Tailwind components */
+@import "tailwindcss/components";
+
+/*	Extend with Project's unique components */
+@import "my-component.css";
+
+
+/*	Tailwind Utilities */
+@import "tailwindcss/utilities";
+
+@import "_utilities.css";

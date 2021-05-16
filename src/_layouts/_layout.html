@@ -1,0 +1,24 @@
+{% include '../_includes/head.html' %}
+
+
+    <header role="banner">
+      <nav id="menu" class="p-4 leading-loose oc-menu oc-push" role="navigation">
+        <h3 class="text-fluid-ms-md"><a href="#{{ molecule.name }}">{{ molecule.name | capitalize }}</h3>
+        {% for molecule in molecules.listMolecules.molecules %}
+        <h3 class="text-fluid-ms-md"><a href="#{{ molecule.name }}">{{ molecule.name | capitalize }}</h3>
+        <ul>
+          {% for atom in molecule.atoms -%}
+          <li><a href="#{{ molecule.name }}-{{ atom }}">{{ atom | capitalize }}</a></li>
+          {% endfor -%}
+        </ul>
+        {% endfor %}
+      </nav>
+    </header>
+    {% include '../_includes/nav.html' %}  
+    <div role="main">
+				{% block main %}
+			  	{# Main layout #}
+			  {% endblock %}
+		</div>
+{% include '../_includes/footer.html' %}
+{% include '../_includes/foot.html' %}

@@ -1,0 +1,18 @@
+---
+title: Homepage
+heading: Heading 1
+templateEngineOverride: njk
+---
+
+{# Select layout type #}
+{% extends "./_layouts/_layout.html" %}
+
+{% block header %}
+  <header class="global-header">
+    {{ heading }}
+  </header>
+{% endblock %}
+
+{% block main %}
+
+{% endblock %}

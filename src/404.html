@@ -1,0 +1,16 @@
+---
+title: 404 Page
+description: Description
+permalink: "/{{ page.fileSlug }}.html"
+templateEngineOverride: njk
+---
+ 
+{% extends "./_layouts/_layout.html" %}
+
+{% block main %}
+
+  <div class="text-center bg-gray-200 cover">
+    <div class="p-2 bg-white center"> <p>🚨 404 - Page could not be found</p></div>
+  </div>
+
+{% endblock %}

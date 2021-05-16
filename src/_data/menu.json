@@ -1,0 +1,25 @@
+{
+  "title" : "Menu",
+  "menuitems": [
+    {
+        "title": "About",
+        "url": "about.html"
+    },
+    {
+        "title": "Careers",
+        "url": "careers.html"
+    },
+    {
+        "title": "News",
+        "url": "news.html"
+    },
+    {
+        "title": "Shop",
+        "url": "shop.html"
+    },
+    {
+        "title": "Contact",
+        "url": "contact.html"
+    }
+  ]
+}

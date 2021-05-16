@@ -1,0 +1,18 @@
+<nav class="flex items-center justify-between flex-wrap  p-gutter shadow-sm">
+      <div class="flex items-center flex-shrink-0 mr-6">
+        <span class="font-semibold text-xl tracking-tight">{{ title }}</span>
+      </div>
+      <div class="block sm:hidden">
+        <button class="flex items-center px-4 py-2 border rounded border-black hover:border-black sm:mt-0" id="menu-toggle" aria-expanded="false">Menu</button>
+      </div>
+      <div class="w-full flex-grow text-center sm:text-left sm:flex sm:items-center sm:w-auto hidden" id="menu-items">
+        <div class="sm:flex-grow">
+          {% for link in menu.menuitems %}
+          <a class="block py-2 mr-0 sm:inline-block sm:p-2 sm:mr-2" href="{{ link.url }}">{{ link.title }}</a>
+          {% endfor %}
+        </div>
+      <div>
+        <a class="inline-block px-4 py-4 leading-none border-2 rounded border-white mt-4 sm:mt-0" href="#">Call to action</a>
+      </div>
+    </div>
+  </nav>

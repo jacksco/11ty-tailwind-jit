@@ -1,0 +1,20 @@
+{
+  "title" : "Site name",
+  "description" : "Description...",
+  "social": [
+    {
+        "facebook": [
+          {
+              "handle": "facebookHandle"
+          }
+        ]
+    },
+    {
+        "twitter": [
+          {
+              "handle": "twitterHandle"
+          }
+        ]
+    }
+  ]
+}

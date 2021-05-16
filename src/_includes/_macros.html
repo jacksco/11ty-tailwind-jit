@@ -1,0 +1,22 @@
+{% 
+  macro image(
+    url="https://source.unsplash.com/collection/12140971",
+    ratio="16-9",
+    class="",
+    width="960",
+    height="540",
+    alt="") 
+%}
+
+<div class="ratio-container ratio-{{ ratio }}">
+  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+       data-srcset="{{url}}/{{ width }}x{{ height }} 1x,
+               {{url}}/{{ width * 1.5 }}x{{ height * 1.5 }} 1.5x,
+               {{url}}/{{ width * 2 }}x{{ height * 2 }} 2x"
+       width="{{ width }}"
+       height="{{ height }}"
+       class="lazyload {{ class }}"
+       loading="lazy"
+       alt="">
+</div>
+{% endmacro %}
