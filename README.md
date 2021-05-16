@@ -9,4 +9,4 @@ A static site generator that works with Eleventy + Tailwind-JIT + Webpack5
 3. Run `npm run build` to generate the final files
 
 
-`main.js` is setup to show how code-splitting might be used for including your own scripts.
+`main.js` is setup to show how code-splitting and how it might be used for loading in your own scripts.
